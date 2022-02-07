@@ -35,6 +35,7 @@ public class EntityManagerConfiguration {
         final Properties props = new Properties();
         props.setProperty("hibernate.hbm2ddl.auto", environment.getProperty("jpa.generate.ddl"));
         props.setProperty("hibernate.show_sql", environment.getProperty("jpa.debug"));
+
         return props;
     }
 

@@ -34,8 +34,7 @@ public class RequestInterceptor {
     public TransactionsResponse getPartnerTransactions(final ProceedingJoinPoint joinPoint, final String partnerCode) {
         TransactionsResponse transactionsResponse = new TransactionsResponse();
         try {
-            LOGGER.info("IN Get Partner Transactions :: Partner Code : {}",
-                    partnerCode);
+            LOGGER.info("IN Get Partner Transactions :: Partner Code : {}", partnerCode);
             transactionsResponse = checkingMissingFields(partnerCode);
             if(StringUtils.isNotEmpty(transactionsResponse.getResponseCode())) {
                 return transactionsResponse;
@@ -64,8 +63,7 @@ public class RequestInterceptor {
     public AirtimeBalanceResponse enquireAirtimeBalance(final ProceedingJoinPoint joinPoint, final String partnerCode, final String msisdn) {
         AirtimeBalanceResponse airtimeBalanceResponse = new AirtimeBalanceResponse();
         try {
-            LOGGER.info("IN Enquire Airtime Balance :: Partner Code : {}, Mobile Number : {}",
-                    partnerCode, msisdn);
+            LOGGER.info("IN Enquire Airtime Balance :: Partner Code : {}, Mobile Number : {}", partnerCode, msisdn);
             airtimeBalanceResponse = checkingMissingFields(partnerCode, msisdn);
             if(StringUtils.isNotEmpty(airtimeBalanceResponse.getResponseCode())) {
                 return airtimeBalanceResponse;
