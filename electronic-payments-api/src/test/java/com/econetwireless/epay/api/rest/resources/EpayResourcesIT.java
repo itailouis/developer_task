@@ -77,6 +77,7 @@ public class EpayResourcesIT {
     public void airtimeTopupShouldReturnResponseCodeSUCCESSIfAllOtherSystemsAreUp() throws Exception {
         final AirtimeTopupRequest airtimeTopupRequest = new AirtimeTopupRequest();
         airtimeTopupRequest.setAmount(2.73);
+        System.out.println("  ----");
         airtimeTopupRequest.setMsisdn("773303584");
         airtimeTopupRequest.setPartnerCode(partnerCode);
         airtimeTopupRequest.setReferenceNumber("TOPUP-REF-0123");

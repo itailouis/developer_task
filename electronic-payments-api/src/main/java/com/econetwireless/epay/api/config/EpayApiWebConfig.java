@@ -13,6 +13,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
+import java.lang.management.ManagementFactory;
+
 /**
  * Created by tnyamakura on 30/11/2016.
  */
@@ -33,6 +35,19 @@ public class EpayApiWebConfig {
         public ReportingProcessor reportingProcessor(final ReportingService reportingService) {
                 return new ReportingProcessorImpl(reportingService);
         }
+
+        //@Bean
+       // public ConfigurableServletWebServerFactory jettyEmbeddedServletContainerFactory(@Value("${server.port:8080}") final String port) {
+
+                //JettyServletWebServerFactory factory = new JettyServletWebServerFactory();
+                //enable thread pool with stats
+                //factory.setThreadPool(new MonitoredQueuedThreadPool());
+
+                //enable JMX
+
+
+                //return factory;
+        //}
 
 
 }
